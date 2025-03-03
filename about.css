@@ -183,42 +183,54 @@ a:hover {
   }
 }
 
-.main .vismis {
+.main .tab-container {
   text-align: center;
 }
 
-.main .vismis .btn button {
+.main .tab-container .tab-buttons button {
   padding: 15px;
   margin: 5px;
   font-size: 15px;
 }
 
-.main .vismis .btn button:hover {
+.main .tab-container .tab-buttons button:hover {
   color: #ffffff;
   background-color: #0796fe;
 }
 
-.main .vision {
+.main #vision {
   display: flex;
   margin-left: 250px;
   margin-right: 150px;
   margin-bottom: 50px;
 }
 
-.main .vision img {
+.main #vision img {
   width: 500px;
 }
 
-.main .mission {
+.main #mission {
   display: flex;
   margin-left: 250px;
   margin-right: 150px;
   margin-bottom: 50px;
 }
 
-.main .mission img {
+.main #mission img {
   width: 500px;
 }
+
+
+.tab-content {
+  display: none;
+  font-size: 18px;
+  padding: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.show{
+  display: block;
+}
+
 
 .main .prop {
   display: flex;
@@ -235,16 +247,16 @@ a:hover {
 }
 
 @media (max-width: 1200px) {
-  .main .vision,
-  .main .mission,
+  .main #vision,
+  .main #mission,
   .main .prop {
     flex-direction: column; 
     margin: 25px;
     align-items: center; 
   }
 
-  .main .vision img,
-  .main .mission img,
+  .main #vision img,
+  .main #mission img,
   .main .prop img {
     width: 85%;
     max-width: 400px; 
@@ -253,8 +265,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .main .vision,
-  .main .mission,
+  .main #vision,
+  .main #mission,
   .main .prop {
     margin: 25px; 
   }
