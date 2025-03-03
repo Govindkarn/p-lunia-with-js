@@ -198,39 +198,28 @@ a:hover {
   background-color: #0796fe;
 }
 
-.main #vision {
-  display: flex;
-  margin-left: 250px;
-  margin-right: 150px;
-  margin-bottom: 50px;
-}
-
-.main #vision img {
-  width: 500px;
-}
-
-.main #mission {
-  display: flex;
-  margin-left: 250px;
-  margin-right: 150px;
-  margin-bottom: 50px;
-}
-
-.main #mission img {
-  width: 500px;
-}
-
-
-.tab-content {
+.main .tab-content {
   display: none;
-  font-size: 18px;
-  padding: 15px;
-  animation: fadeIn 0.3s ease-in-out;
-}
-.show{
-  display: block;
+  text-align: left;
+  margin-left: 250px;
+  margin-right: 150px;
+  margin-bottom: 50px;
 }
 
+.main .tab-content img {
+  width: 500px;
+}
+
+.main .show {
+  display: flex;
+  margin-left: 250px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+}
+
+.main .show img {
+  width: 500px;
+}
 
 .main .prop {
   display: flex;
