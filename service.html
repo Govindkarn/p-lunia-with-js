@@ -42,89 +42,15 @@
         </div>
     </div>
     <!-- Main-Section -->
-    <div class="main">
-        <div class="heading">
-            <p>Consulting Services</p>
-            <h2>Our Best Consulting Services</h2>
+    <div class="service-main-container">
+        <div class="service-container">
+            <div class="intro">
+                <p>Consulting Services</p>
+                <h2>Our Best Consulting Services</h2>
+            </div>
         </div>
-        <div class="detail">
-            <div class="row">
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-1.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Statutory Audit</h3>
-                        <p>Comprehensive audits to ensure compliance with statutory obligations and regulations.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-2.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Internal Audit</h3>
-                        <p>Evaluating the effectiveness of internal controls and risk management processes.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-3.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Book Keeping & Accounting</h3>
-                        <p>Accurate record-keeping of financial transactions to maintain financial integrity.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-4.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Taxation & Secretarial compliances</h3>
-                        <p>Ensuring adherence to tax laws and Secretarial regulations to mitigate risks.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-5.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Financial Due Diligence and Business Valuation</h3>
-                        <p>In-depth financial analysis for mergers, acquisitions, or investment decisions.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-6.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Mergers & Acquisitions</h3>
-                        <p>Strategic guidance through the complexities of mergers and acquisitions.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-7.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Project Financing Advisory</h3>
-                        <p>Expert advice on securing funding for various projects to achieve success.</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="img">
-                        <img src="img/service/icon-8.png" alt="service image">
-                    </div>
-                    <div class="txt">
-                        <h3>Account Consulting</h3>
-                        <p>Tailored consulting to optimize your accounting processes and enhance financial performance.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="service-members" id="service-members">
+            <!-- content will be added through js -->
         </div>
     </div>
     <!-- footer-part -->
@@ -173,6 +99,38 @@
             x.classList.toggle("show");
         }
         //navbar close
+
+        //contents for main section
+        const serviceMembers = [
+            {name:"Statutory Audit", func:"Comprehensive audits to ensure compliance with statutory obligations and regulations.", image:"img/service/icon-1.png"},
+            {name:"Internal Audit", func:"Evaluating the effectiveness of internal controls and risk management processes.", image:"img/service/icon-2.png"},
+            {name:"Book Keeping & Accounting", func:"Accurate record-keeping of financial transactions to maintain financial integrity.", image:"img/service/icon-3.png"},
+            {name:"Taxation & Secretarial compliances", func:"Ensuring adherence to tax laws and Secretarial regulations to mitigate risks.", image:"img/service/icon-4.png"},
+            {name:"Financial Due Diligence and Business Valuation", func:"In-depth financial analysis for mergers, acquisitions, or investment decisions.", image:"img/service/icon-5.png"},
+            {name:"Mergers & Acquisitions", func:"Strategic guidance through the complexities of mergers and acquisitions.", image:"img/service/icon-6.png"},
+            {name:"Project Financing Advisory", func:"Expert advice on securing funding for various projects to achieve success.", image:"img/service/icon-7.png"},
+            {name:"Account Consulting", func:"Tailored consulting to optimize your accounting processes and enhance financial performance.", image:"img/service/icon-8.png"}
+        ];
+
+        
+        document.addEventListener("DOMContentLoaded", function(){
+            const serviceContainer = document.getElementById("service-members");
+            let serviceHTML = "";
+            
+            for(const member of serviceMembers){
+                serviceHTML += `
+                <div class="service-member">
+                    <div class="photo">
+                        <img src="${member.image}" alt="${member.name}">
+                    </div>
+                    <div class="introduction">
+                        <h4 class="name">${member.name}</h4>
+                        <p class="func">${member.func}</p>
+                    </div>
+                </div>`;
+            }
+            serviceContainer.innerHTML = serviceHTML;
+        });
     </script>
 </body>
 

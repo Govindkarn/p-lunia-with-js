@@ -125,53 +125,104 @@ body{
 }
 
 /* Main section */
-.main {
-  margin: 0 auto 50px;
-  max-width: 1200px; 
+.service-main-container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.main .heading {
-  text-align: center; 
-  text-align: left; 
-  /* position: relative;  */
+.service-container {
+  max-width: 1400px;
+  padding: 50px;
+  margin: 0 auto;
 }
 
-.main .detail .row {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
+.intro {
+  position: relative;
 }
 
-.main .detail .row .service {
-  border: 1px solid rgb(219, 212, 212);
+.service-members {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 25px;
+  gap: 20px;
+}
+
+.service-member {
+  position: relative;
   padding: 15px; 
   margin: 10px; 
   text-align: center;
-  width: 23%;
-  box-sizing: border-box; 
+  border: 1px solid rgb(219, 212, 212);
+  width: 63%;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.main .detail .row .service .img img {
-  max-width: 100%; 
-  height: auto; 
+.service-member:hover {
+  box-shadow: 0 0 10px rgba(74, 9, 9, 0.1); 
+  border-color: white;
 }
 
-.main .detail .row .service:hover {
-  background-color: #ebf7ff;
-  box-shadow: 0 0 30px rgba(74, 9, 9, 0.1);
-  border: #ebf7ff;
+.photo {
+  padding: 5px;
+  height: 205px;
+  width: 100%;
+  margin-bottom: 10px; 
 }
 
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .main .detail .row .service {
-      width: 90%; 
-      margin: 10px auto; 
+.introduction {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+}
+
+.name {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0;
+}
+
+.func {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .service-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-member {
+    width: 60%; 
   }
 }
-@media (max-width: 1500px){
-  .main .heading{
-    margin: 25px;
+
+@media (max-width: 968px) {
+  .service-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-member {
+    width: 50%; 
+  }
+}
+
+@media (max-width: 800px) {
+  .service-members {
+    grid-template-columns: 1fr;
+  }
+
+  .service-member {
+    width: 45%; 
   }
 }
 
