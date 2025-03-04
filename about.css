@@ -184,6 +184,10 @@ body{
   background-color: #0796fe;
 }
 
+.main .tab-container .tab-buttons button.active{
+  color: #f1fbff;
+  background-color: #0796fe;
+}
 .main .tab-content {
   display: none;
   text-align: left;
