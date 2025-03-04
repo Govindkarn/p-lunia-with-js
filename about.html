@@ -31,21 +31,16 @@
         </span>
     </header>
     <!-- Nav Bar -->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li> <a href="service.html">Service</a></li>
-            <li> <a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-        
-     </div>
+    <div class="navbar">
+        <div class="hamburger"><i class="fa-solid fa-bars" onclick="myFunction()"></i> </div>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="service.html">Service</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
     <!-- Main-Section -->
      <div class="main">
         <div class="about">
@@ -157,6 +152,13 @@
         </div>
     </footer>
         <script>
+        //nav
+        function myFunction() {
+            var x = document.getElementById("menu");
+            x.classList.toggle("show");
+        }
+        //navbar close
+
         function switchTab(tabId) {
     
             const contents = document.querySelectorAll('.tab-content');

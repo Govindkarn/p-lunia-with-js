@@ -31,69 +31,66 @@
         </span>
     </header>
     <!-- Nav Bar -->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li> <a href="service.html">Service</a></li>
-            <li> <a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <div class="hamburger"><i class="fa-solid fa-bars" onclick="myFunction()"></i> </div>
+        <div id="menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
     <!-- Home page card -->
     <section class="slider-home">
         <div class="slider">
-          <div class="slider-img">
-            <img src="img/index/1.jpg" alt="home page" >
-          </div>
-          <div class="slidertext">
-            <h2 style="color: white">
-              Empowering Businesses Through Financial Clarity
-            </h2>
-            <p style="color: white">
-              We provide essential services, turning complex financial data into
-              clear insights for business success.
-            </p>
-          </div>
+            <div class="slider-img">
+                <img src="img/index/1.jpg" alt="home page">
+            </div>
+            <div class="slidertext">
+                <h2 style="color: white">
+                    Empowering Businesses Through Financial Clarity
+                </h2>
+                <p style="color: white">
+                    We provide essential services, turning complex financial data into
+                    clear insights for business success.
+                </p>
+            </div>
         </div>
         <div class="slider">
-          <div class="slider-img">
-            <img src="img/index/2.jpg" alt="home page" >
-          </div>
-  
-          <div class="slidertext">
-            <h2 style="color: rgb(255, 255, 255)">
-              Navigating Financial Landscapes
-            </h2>
-            <p style="color: white">
-              We expertly guide businesses through complex financial environments,
-              ensuring compliance and strategic growth.
-            </p>
-          </div>
+            <div class="slider-img">
+                <img src="img/index/2.jpg" alt="home page">
+            </div>
+
+            <div class="slidertext">
+                <h2 style="color: rgb(255, 255, 255)">
+                    Navigating Financial Landscapes
+                </h2>
+                <p style="color: white">
+                    We expertly guide businesses through complex financial environments,
+                    ensuring compliance and strategic growth.
+                </p>
+            </div>
         </div>
-  
+
         <div class="slider">
-          <div class="slider-img">
-            <img src="img/index/3.jpg" alt="home page" />
-          </div>
-  
-          <div class="slidertext">
-            <h2 style="color: rgb(255, 255, 255)">
-              Transforming Data into Decisions
-            </h2>
-            <p style="color: white">
-              We analyze financial data to deliver actionablr insights, empowering
-              businesses to make informed desision for their future.
-            </p>
-          </div>
+            <div class="slider-img">
+                <img src="img/index/3.jpg" alt="home page" />
+            </div>
+
+            <div class="slidertext">
+                <h2 style="color: rgb(255, 255, 255)">
+                    Transforming Data into Decisions
+                </h2>
+                <p style="color: white">
+                    We analyze financial data to deliver actionablr insights, empowering
+                    businesses to make informed desision for their future.
+                </p>
+            </div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-      </section>
+    </section>
     <!-- Main-Container -->
     <div class="main-container">
         <div class="carousel-container"></div>
@@ -258,39 +255,47 @@
             </div>
             <hr>
             <div class="bottom-footer">
-                <p>©<span id="para"></span>  <a href="index.html"> P. Lunia & Associates</a>,All Right Reserved.</p>
+                <p>©<span id="para"></span> <a href="index.html"> P. Lunia & Associates</a>,All Right Reserved.</p>
                 <p> Designed By <a href="https://www.velociscore.com/">Velocis Core</a></p>
             </div>
         </div>
     </footer>
-        <!-- javascript -->
-        <script>
-            const now  = new Date().getFullYear();
-            document.getElementById('para').textContent = now;
+    <!-- javascript -->
+    <script>
 
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            function plusSlides(n) {
-              showSlides((slideIndex += n));
-            }
-            function currentSlide(n) {
-              showSlides((slideIndex = n));
-            }
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("slider");
-              if (n > slides.length) {
+        //nav
+        function myFunction() {
+            var x = document.getElementById("menu");
+            x.classList.toggle("show");
+        }
+        //navbar close
+
+        const now = new Date().getFullYear();
+        document.getElementById('para').textContent = now;
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slider");
+            if (n > slides.length) {
                 slideIndex = 1;
-              }
-              if (n < 1) {
-                slideIndex = slides.length;
-              }
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              }
-              slides[slideIndex - 1].style.display = "block";
             }
-          </script>
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

@@ -31,19 +31,16 @@
         </span>
     </header>
     <!-- Nav Bar -->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li> <a href="service.html">Service</a></li>
-            <li> <a href="team.html">Team</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <div class="hamburger"><i class="fa-solid fa-bars" onclick="myFunction()"></i> </div>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </div>
     <!-- main part -->
     <div class="main-container">
         <div class="heading">
@@ -91,7 +88,7 @@
 
     <!-- footer-part -->
     <footer>
-        <div class="footer-wraper" >
+        <div class="footer-wraper">
             <div class="footer-container">
                 <div class="left-side">
                     <h3>Our Head Office</h3>
@@ -109,7 +106,7 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-    
+
                 </div>
                 <div class="right-side">
                     <h3>Newsletter</h3>
@@ -128,6 +125,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        //nav
+        function myFunction() {
+            var x = document.getElementById("menu");
+            x.classList.toggle("show");
+        }
+        //navbar close
+    </script>
 </body>
 
 </html>
