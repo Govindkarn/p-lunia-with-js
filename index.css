@@ -248,9 +248,13 @@ body {
 
 .main-container .our-feature .text .icons .icon i {
   color: #0796fe;
-  font-size: 17px;
+  font-size: 25px;
 }
 
+.main-container .our-feature .text .icons .icon .counter, sup{
+  color: #0796fe;
+  font-size: 25px;
+}
 .main-container .our-feature .text .icons .icon {
   padding-right: 10px;
 }
